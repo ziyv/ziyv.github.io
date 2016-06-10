@@ -1,0 +1,128 @@
+<!-- Time-stamp: <zy-android-ImageViewTest.html, 2016-04-26 21:01 Ziyu Zhang > -->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+  <head>
+    <title> Android </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rev="made" href="mailto:emacs_dd@yahoo.com">
+    <link rel="stylesheet" type="text/css" href="./zy.css">
+  </head>
+
+  <body>
+
+    <h1> 图片浏览 </h1>
+
+    <h2> 运行效果 </h2>
+
+    <p align="center"> <img src="./ImageViewTest.jpg" /> </p>
+
+    <h2> 界面main.xml </h2>
+
+    <pre>
+      &lt;?<span style="color: #00BBBB;">xml</span> <span style="color: #eeddaa;">version</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">1.0</span><span style="color: #10D010;">"</span> <span style="color: #eeddaa;">encoding</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">utf-8</span><span style="color: #10D010;">"</span>?&gt;
+      &lt;<span style="color: #D0D000;">RelativeLayout</span> <span style="color: #b0c4de;">xmlns</span>:<span style="color: #eeddaa;">android</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">http://schemas.android.com/apk/res/android</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_width</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">fill_parent</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_height</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">fill_parent</span><span style="color: #10D010;">"</span>&gt;
+
+      &lt;<span style="color: #D0D000;">Button</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">id</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">@+id/btPrevious</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_width</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">wrap_content</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_height</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">wrap_content</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">text</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">&#19978;&#19968;&#24352;</span><span style="color: #10D010;">"</span> /&gt;
+
+      &lt;<span style="color: #D0D000;">Button</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">id</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">@+id/btNext</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_alignParentRight</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">true</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_width</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">wrap_content</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_height</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">wrap_content</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">text</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">&#19979;&#19968;&#24352;</span><span style="color: #10D010;">"</span> /&gt;
+
+      &lt;<span style="color: #D0D000;">ImageView</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">id</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">@+id/ivPhoto</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_centerHorizontal</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">true</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_below</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">@id/btPrevious</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_width</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">fill_parent</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_height</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">wrap_content</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">src</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">@drawable/xue</span><span style="color: #10D010;">"</span>
+      /&gt;
+      &lt;/<span style="color: #D0D000;">RelativeLayout</span>&gt;
+    </pre>
+
+    <h2> MainActivity.java </h2>
+
+    <pre>
+      <span style="color: #00BBBB;">package</span> <span style="color: #cd5c5c;">com</span>.<span style="color: #cd5c5c;">example</span>.<span style="color: #cd5c5c;">zy</span>.<span style="color: #cd5c5c;">ImageViewTest</span>;
+
+      <span style="color: #00BBBB;">import</span> <span style="color: #cd5c5c;">android</span>.<span style="color: #cd5c5c;">app</span>.<span style="color: #ff7788; font-weight: bold;">Activity</span>;
+      <span style="color: #00BBBB;">import</span> <span style="color: #cd5c5c;">android</span>.<span style="color: #cd5c5c;">os</span>.<span style="color: #ff7788; font-weight: bold;">Bundle</span>;
+      <span style="color: #00BBBB;">import</span> <span style="color: #cd5c5c;">android</span>.<span style="color: #cd5c5c;">widget</span>.<span style="color: #ff7788; font-weight: bold;">Button</span>;
+      <span style="color: #00BBBB;">import</span> <span style="color: #cd5c5c;">android</span>.<span style="color: #cd5c5c;">widget</span>.<span style="color: #ff7788; font-weight: bold;">ImageView</span>;
+      <span style="color: #00BBBB;">import</span> <span style="color: #cd5c5c;">android</span>.<span style="color: #cd5c5c;">view</span>.<span style="color: #ff7788; font-weight: bold;">View</span>;
+      <span style="color: #00BBBB;">import</span> <span style="color: #cd5c5c;">android</span>.<span style="color: #cd5c5c;">widget</span>.<span style="color: #ff7788; font-weight: bold;">Toast</span>;
+      <span style="color: #00BBBB;">import</span> <span style="color: #cd5c5c;">android</span>.<span style="color: #cd5c5c;">view</span>.<span style="color: #cd5c5c;">View</span>.<span style="color: #ff7788; font-weight: bold;">OnClickListener</span>;
+
+      <span style="color: #00BBBB;">public</span> <span style="color: #00BBBB;">class</span> <span style="color: #ff7788; font-weight: bold;">MainActivity</span> <span style="color: #00BBBB;">extends</span> <span style="color: #ff7788; font-weight: bold;">Activity</span>
+      {
+      <span style="color: #00BBBB;">private</span> <span style="color: #ff7788; font-weight: bold;">Button</span> <span style="color: #eeddaa;">btNext</span>;
+      <span style="color: #00BBBB;">private</span> <span style="color: #ff7788; font-weight: bold;">Button</span> <span style="color: #eeddaa;">btPrevious</span>;
+      <span style="color: #00BBBB;">private</span> <span style="color: #ff7788; font-weight: bold;">ImageView</span> <span style="color: #eeddaa;">ivPhoto</span>;
+      <span style="color: #ff7788; font-weight: bold;">int</span> <span style="color: #eeddaa;">i</span> = 0;
+      <span style="color: #ff7788; font-weight: bold;">int</span>[] <span style="color: #eeddaa;">PhotoIDs</span> = <span style="color: #00BBBB;">new</span> <span style="color: #ff7788; font-weight: bold;">int</span>[]{
+      R.drawable.xue,
+      R.drawable.pubu,
+      R.drawable.linyin,
+      R.drawable.qw
+      };
+      <span style="color: #a8a8a8; font-weight: bold; font-style: italic;">// </span><span style="color: #a8a8a8; font-weight: bold; font-style: italic;">@Override
+      </span> <span style="color: #00BBBB;">public</span> <span style="color: #ff7788; font-weight: bold;">void</span> <span style="color: #D0D000;">onCreate</span>(<span style="color: #ff7788; font-weight: bold;">Bundle</span> <span style="color: #eeddaa;">savedInstanceState</span>)
+      {
+      <span style="color: #00BBBB;">super</span>.onCreate(savedInstanceState);
+      setContentView(R.layout.main);
+      addListenerOnButton();
+      }
+
+      <span style="color: #00BBBB;">public</span> <span style="color: #ff7788; font-weight: bold;">void</span> <span style="color: #D0D000;">addListenerOnButton</span>() {
+      ivPhoto = (<span style="color: #ff7788; font-weight: bold;">ImageView</span>) findViewById(R.id.ivPhoto);
+
+      btNext = (<span style="color: #ff7788; font-weight: bold;">Button</span>) findViewById(R.id.btNext);
+      btNext.setOnClickListener(<span style="color: #00BBBB;">new</span> <span style="color: #ff7788; font-weight: bold;">OnClickListener</span>() {
+
+      <span style="color: #cd5c5c;">@Override</span>
+      <span style="color: #00BBBB;">public</span> <span style="color: #ff7788; font-weight: bold;">void</span> <span style="color: #D0D000;">onClick</span>(<span style="color: #ff7788; font-weight: bold;">View</span> <span style="color: #eeddaa;">arg0</span>) {
+      <span style="color: #a8a8a8; font-weight: bold; font-style: italic;">// </span><span style="color: #a8a8a8; font-weight: bold; font-style: italic;">int j=(++i)%2;
+      </span> i=(i+1)%4;
+      <span style="color: #ff7788; font-weight: bold;">int</span> <span style="color: #eeddaa;">j</span>=i+1;
+      <span style="color: #ff7788; font-weight: bold;">Toast</span> <span style="color: #eeddaa;">toast</span> = Toast.makeText(MainActivity.<span style="color: #00BBBB;">this</span>,<span style="color: #10D010;">"&#31532;"</span> +j+<span style="color: #10D010;">"&#24352;"</span> , <span style="color: #cd5c5c;">Toast</span>.LENGTH_SHORT);
+      toast.show();
+      ivPhoto.setImageResource(PhotoIDs[i]);
+
+      }
+
+      });
+
+      btPrevious = (<span style="color: #ff7788; font-weight: bold;">Button</span>) findViewById(R.id.btPrevious);
+      btPrevious.setOnClickListener(<span style="color: #00BBBB;">new</span> <span style="color: #ff7788; font-weight: bold;">OnClickListener</span>() {
+
+      <span style="color: #cd5c5c;">@Override</span>
+      <span style="color: #00BBBB;">public</span> <span style="color: #ff7788; font-weight: bold;">void</span> <span style="color: #D0D000;">onClick</span>(<span style="color: #ff7788; font-weight: bold;">View</span> <span style="color: #eeddaa;">arg0</span>) {
+      i=i-1;
+      <span style="color: #00BBBB;">if</span>( i &lt; 0 ){
+      i=3;
+      }
+      <span style="color: #ff7788; font-weight: bold;">int</span> <span style="color: #eeddaa;">j</span>=i+1;
+      <span style="color: #ff7788; font-weight: bold;">Toast</span> <span style="color: #eeddaa;">toast</span> = Toast.makeText(MainActivity.<span style="color: #00BBBB;">this</span>,<span style="color: #10D010;">"&#31532;"</span> +j+<span style="color: #10D010;">"&#24352;"</span> , <span style="color: #cd5c5c;">Toast</span>.LENGTH_SHORT);
+      toast.show();
+      ivPhoto.setImageResource(PhotoIDs[i]);
+
+      }
+
+      });
+
+      }
+
+      }
+    </pre>
+  </body>
+</html>

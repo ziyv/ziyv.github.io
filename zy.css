@@ -1,0 +1,839 @@
+/* Time-stamp: <zy.css, 2016-04-26 21:19 Ziyu Zhang > */
+
+*{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	vertical-align: baseline;
+	outline: none;
+	box-sizing: border-box;
+}
+body{
+	text-rendering: optimizeLegibility;
+	font-size: 62.5%;
+	font-family: -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+	text-align: center;
+	color: #333;
+	line-height: 1;
+	background: #fff;
+}
+.section{
+	width: 100%;
+}
+a{
+	color: #333;
+	cursor: hand;
+	z-index: 9999;
+	-webkit-transition: color .15s ease-in 0s;
+	-moz-transition: color .15s ease-in 0s;
+	-ms-transition: color .15s ease-in 0s;
+}
+::selection{
+	background: #f60c3e;
+	color: #fff;
+}
+.body-text{
+	max-width: 55%;
+	width: 40rem;
+}
+
+/* * { */
+/* margin: 0px; */
+/* padding: 0px; */
+/* } */
+
+/* /\* Page definitions *\/ */
+/* html, body { */
+/* height: 100%; */
+/* } */
+
+/* td, div { */
+/* font: normal 11px/14px Arial, sans-serif; */
+/* color: #cecece; */
+/* text-align: left; */
+/* } */
+
+/* body{ */
+/* font-family: "Bitstream Vera Sans", sans-serif; /\* favour free fonts!! *\/ */
+/* /\* background-color: #eee; *\/ */
+/* /\* background-color: #ededed; *\/ */
+/* /\* background-color: LightYellow1; *\/ */
+/* /\* background-color: LightGray; *\/ */
+/* background: #efdcc2; */
+/* /\* background: #feda6b; *\/ */
+/* /\* background: #b67b5f; *\/ */
+/* /\* background-color: beige; *\/ */
+/* /\* background-color: ivory; *\/ */
+/* /\* background-color: SeaGreen3; *\/ */
+/* /\* background-color: seashell; *\/ */
+/* /\* background-color: ivory; *\/ */
+/* /\* background-color: #f5f5f5; *\/ */
+/* /\* background-color: #F8F4E7; *\/ */
+/* /\* background-color: #37A66E; *\/ */
+/* /\* background-color: #F0CC7A; *\/ */
+/* /\* background-color: #E3BB84; *\/ */
+/* /\* background-color: #A6754E; *\/ */
+/* /\* background-color: #6b5f4e; *\/ */
+/* /\* background-color: #6A7A7A; *\/ */
+/* /\* color: #cecece; *\/ */
+/* /\* background: url(http://static.colourlovers.com/images/v3/bg.png) center repeat-y; *\/ */
+
+/* /\* background-color: #0791FA; *\/ */
+
+/* /\* font: normal 11px/14px Arial, sans-serif; *\/ */
+/* /\* color: #cecece; *\/ */
+
+/* /\* background: url(http://static.colourlovers.com/images/v3/bg.png) center repeat-y; *\/ */
+
+/* margin: 0; */
+/* padding: 1em; */
+/* /\* color: #552800; *\/ */
+/* } */
+
+/* ==================================Head====================================== */
+/* h1,h2,h3,h4,h5,h6{ */
+/* color: #000; */
+/* font-weight: bold; */
+/* font-family: "Bitstream Vera Sans", sans-serif; /\* favour free fonts!! *\/ */
+/* border: 0; */
+/* background-color: transparent; */
+/* } */
+
+h1{
+    text-align: center;
+	font-size: 3rem;
+	color: #333;
+	font-weight: 400;
+	line-height: 1.26;
+	z-index: 999;
+	padding: 0 .5em;
+	-webkit-transition: color .15s ease-in 0s;
+	-moz-transition: color .15s ease-in 0s;
+	-ms-transition: color .15s ease-in 0s;
+}
+
+h1 a{
+	text-decoration: none;
+	color: #333;
+}
+h1 a:hover{
+	color: #f60c3e;
+	-webkit-transition: color .15s ease-in 0s;
+	-moz-transition: color .15s ease-in 0s;
+	-ms-transition: color .15s ease-in 0s;
+}
+h1 span{
+	opacity: 1;
+	font-weight: 100;
+	vertical-align: super;
+	font-size: 0.5em;
+	margin-right: .5em;
+}
+h1 span:before{
+	content: "№ ";
+}
+
+/* h1 { */
+/* font-size: 3rem; */
+/* text-align: center; */
+/* } */
+
+.tagline{
+    text-align: center;
+	font-size: 2rem;
+	margin: 0 0 1.5em 1em;
+	color: #333;
+	line-height: 1.5;
+	letter-spacing: -0.05em;
+	height: 9rem;
+	font-weight: 900;
+	overflow: visible !important;
+	font-family: 'PingFang SC', 'Myriad Pro', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+}
+.tagline i{
+	font-style: normal;
+}
+.tagline em{
+	letter-spacing: -0.27em;
+	font-style: normal;
+}
+
+h2.pulldown {
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 10pt;
+    padding: 3px 0px 3px 10px;
+    /* color: #005a9c;
+                 color: #f63811;
+                 color: #c61a02; */
+    color: #005a9c;
+    font-family: georgia, "trebuchet ms";
+    font-weight: bold;
+    font-size: 20px;
+    /* border-bottom: #005a9c 1px solid;*/
+    border: #005a9c 1px solid;
+    border-left: #005a9c 6px solid;
+    border-right: #005a9c 6px solid;
+
+    /* border-width: 1px;*/
+    /* border-style: ridge;*/
+    background: #c4d9ef;
+    line-height: 1;
+    background-image: url(http://127.0.0.1/images/lightblue.gif);
+    // background: url(http://127.0.0.1/images/arrow_up.gif);no-repeat right
+}
+
+h3.pulldown {
+    margin-left: 5px;
+    margin-right: 0px;
+    margin-top: 5pt;
+    padding: 3px 0px 3px 5px;
+    color: #2b804c;
+    /* color: #6b18e7;
+                 color: #ff3300;*/
+    font-family: "trebuchet ms";
+    font-weight: bold;
+    font-size: 18px;
+    border-bottom: #2b804c 1px solid;
+    border-left: #2b804c 6px solid;
+    border-right: #2b804c 6px solid;
+    /* border-bottom: #6b18e7 1px dashed;
+                 border-style: groove; */
+    background: #d9eae0;
+    line-height: 1;
+    background-image: url(http://127.0.0.1/images/lightgreen.gif);
+}
+
+h3.titlebar, .tbar h3, .tbarhigh h3 {
+    border-top: 1px solid #bcd;
+    background: #eef0f3 url("http://127.0.0.1/images/titlebar_bg2.png")
+                        repeat-x bottom left;
+    font-size: 82.3%;
+    color: #456;
+    padding: .3em .5em 1.7em .5em;
+    margin: 0 0 -.5em 0;
+}
+.tbar b, .tbarhigh b {display: none;margin: 0; padding: 0;}
+
+lh4.pulldown {
+    margin-left: 10px;
+    margin-right: 0px;
+    padding: 3px 0px 3px 10px;
+    font-family: "trebuchet ms";
+    font-weight: bold;
+    font-size: 16px;
+    /* color: (#963455; fce6eb) (4d2b82, e0d5f1) */
+    color: #d04b44;
+    border-bottom: #d04b44 1px solid;
+    border-left: #d04b44 6px solid;
+    /*: #f2dad8;*/
+    line-height: 1;
+    /* background-image: url(../images/nicebg2.png);*/
+}
+
+/* END Head */
+
+p{
+
+    /* font-size: 1rem; */
+    font-size: 3.0em;
+}
+
+img {
+    border: none;
+}
+
+/* ============== */
+/* Anchor */
+/* ============== */
+/* a, a:link, a:visited, a:active, a:hover { */
+/* color: #505050; */
+/* http://www.colourlovers.com/ */
+
+/* /\* text-decoration: underline; *\/ */
+/* } */
+
+a {
+    /*color: #666666;*/
+    text-decoration: none;
+    /* font-size: inherit; */
+    /* font-family: inherit; */
+}
+
+a:link {
+    /*color:#0000A0; */
+    /* background-color: blue; */
+    background-color: transparent;
+    text-decoration: none;
+}
+a:hover {
+    /* color: #EAB719; */
+    /* text-decoration: none; */
+    background-color: transparent;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+a:visited {
+    /* color: #A000A0; */
+    background-color: transparent;
+    text-decoration: none;
+}
+
+a.active {color: #00A000;}
+
+.center {
+    text-align: center;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.quote {
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.hrsmall {
+    width: 80px;
+    height: 1px;
+    margin-left: 20px;
+}
+
+th {
+    text-align: left;
+}
+
+hr {
+    height: 1px;
+    border: none;
+    background-color: #000;
+}
+
+fieldset {
+    background-color: #eee;
+    padding: 0.8em;
+}
+input[type="submit"] {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+
+#contents {position: absolute; top: 0; left: 0; margin: 0px; padding: 0px; z-index:20;}
+#main {padding: 0px; margin-left: 0px; margin-top: 0px; height: auto; margin-bottom: 80px; z-index:20}
+#footer {position: absolute; bottom: 0; z-index:10;}
+
+/* ==================================Primary Navigation====================================== */
+#primary-navigation {
+    clear: left;
+    background: url("http://127.0.0.1/images/primary_navigation_background.gif") repeat-x #75A2CE;
+    margin: 0 21px;
+    height: 28px;
+    padding: 0px;
+    position: relative;
+    z-index: 3;
+}
+
+#primary-navigation ul {
+    margin: 0;
+    padding: 0;
+}
+
+#primary-navigation li {
+    float: left;
+    display: block;
+    padding: 5px 13px 5px 13px;
+    border-left: 1px solid #B7CDE1;
+    height: 18px;
+    position: relative;
+    z-index: 5;
+}
+
+#primary-navigation li.edge {
+    padding: 5px 15px 5px 15px;
+}
+
+#primary-navigation li a {
+    /* font-family: arial, franklin gothic medium cond,sans-serif; */
+    font-weight: bold;
+    font-size: 10pt;
+    color: white;
+    text-transform: uppercase;
+    height: 18px;
+}
+
+#primary-navigation li div,
+#primary-navigation li ul,
+#primary-navigation li li {
+    width: 145px;
+}
+
+#primary-navigation li div {
+    position: absolute;
+    left: 0px;
+    top: 28px;
+    background: url("http://127.0.0.1/images/primary_navigation_corners_lower.gif") bottom no-repeat transparent;
+    padding: 0 0 3px;
+    margin: 0;
+    display: none;
+}
+
+#primary-navigation li.edge div {
+    left: auto;
+    right: -1px;
+    top: 28px;
+}
+
+#primary-navigation li.edge li {
+    text-align: right;
+}
+
+#primary-navigation li ul {
+    background: url("http://127.0.0.1/images/primary_navigation_dropdown_background.gif") repeat-x #707070;
+    padding: 0 0 14px;
+    margin: 0;
+    display: table; /* Mozilla, Opera background fix *//* Mozilla, Opera background fix */
+}
+
+#primary-navigation li li {
+    display: block;
+    float: left;
+    padding: 0;
+    margin: 10px 0px -10px;
+    border-left: none;
+    height: 30px;
+}
+
+#primary-navigation li li a {
+    display: block;
+    padding: 6px 15px 3px;
+    margin: 0px 0px;
+    text-transform: none;
+    font-family: Tahoma, Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+    font-weight: normal;
+}
+
+#primary-navigation li li a img {
+    vertical-align: middle;
+}
+
+#primary-navigation li li:hover {
+    background: none transparent;
+}
+
+#primary-navigation a:hover {
+    text-decoration: none;
+}
+
+#primary-navigation li li a:hover {
+    text-decoration: none;
+    background: #474747;
+}
+
+#primary-navigation li:hover div, #primary-navigation li.over div {
+    display: block;
+}
+
+#primary-navigation li:hover,
+#primary-navigation li.over,
+#primary-navigation li.active {
+    background: url("http://127.0.0.1/images/primary_navigation_background_active.gif") repeat-x #2469AF;
+}
+
+/* Code for removing the primary navigation */
+.nonav #top-of-page {
+    height: 77px;
+}
+
+.nonav #content {
+    background: url("http://127.0.0.1/images/background_no_nav.gif") no-repeat white;
+}
+/* END Primary Navigation */
+
+/* Head*/
+
+/* toplink */
+.toplink {
+    font-size: small;
+    align: right;
+    margin-right: 10px;
+    line-height:6;
+}
+.toplink a {
+    text-decoration: none;
+    color: inherit;
+    background: inherit;
+}
+.toplink a:hover { text-decoration: underline }
+/*.toplink A:visited { color: darkgray; text-decoration: none }*/
+/* END toplink */
+
+/* /\* toplink *\/ */
+/* .toplink { */
+/*	font-size: small; */
+/*	float: right; */
+/*	margin-right: 10px; */
+/*	line-height:2; */
+/* } */
+/* .toplink A { */
+/*	text-decoration: none; */
+/*	color: inherit; */
+/*	background: inherit; */
+/* } */
+/* .toplink A:hover { text-decoration: underline } */
+/* /\*.toplink A:visited { color: darkgray; text-decoration: none }*\/ */
+/* /\* END toplink *\/ */
+
+/* ==================================list====================================== */
+ul{
+    line-height: 1.5em;
+    margin: 0.5em 0 0 1.5em;
+    padding: 0;
+}
+
+ol {
+    line-height: 1.5em;
+    margin: 0.5em 0 0 1.5em;
+    padding: 0;
+}
+ul a, ol a {
+    text-decoration: underline;
+}
+ul.square{
+    list-style-type: square;
+    list-style-image: url(http://127.0.0.1/images/bullet.gif);
+}
+
+ul.blank{
+    list-style:none;
+}
+ul.mac{
+    list-style: disc outside;
+    list-style-image:url(http://127.0.0.1/images/mac_pic3.gif);
+}
+ul.ballblue{
+    list-style-image:url(http://127.0.0.1/images/ballblue.gif);
+}
+ul.arrow{
+    list-style-image:url(http://127.0.0.1/images/arrow_rt.gif);
+}
+
+/* END list */
+
+/* Generic nowrap class */
+.nowrap {
+    white-space: nowrap;
+}
+
+/* menu */
+.menu {
+    display: none;
+    margin-left: 5px;
+    color: #000;
+}
+.menu a {
+    color: #333;
+}
+/*
+   .menu a:hover {
+                   color: #B22222;
+                   margin-left: 10px;
+                   }
+*/
+
+#nav-menu ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#nav-menu li {
+    float: left;
+    margin: 0 0.15em;
+}
+
+#nav-menu li a {
+    background: url(background.gif) #fff bottom left repeat-x;
+    height: 2em;
+    line-height: 2em;
+    float: left;
+    width: 9em;
+    display: block;
+    border: 0.1em solid #dcdce9;
+    color: #0d2474;
+    text-decoration: none;
+    text-align: center;
+    margin: 0; position: relative;
+    background: #666 url(/images/block-title-bg.png) repeat-x;
+}
+
+/* Hide from IE5-Mac \*/
+#nav-menu li a {
+    float: none
+}
+/* End hide */
+
+#nav-menu {
+    width:30em
+}
+
+#nav-menu-1 li {
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 5pt;
+    padding: 3px 0px 3px 10px;
+    /* color: #005a9c;
+                    color: #f63811;
+                    color: #c61a02; */
+    color: #005a9c;
+    font-family: georgia, "trebuchet ms";
+    font-weight: bold;
+    font-size: 12pt;
+    /*border-bottom: #005a9c 1px solid;*/
+    border: #005a9c 1px solid;
+    border-left: #005a9c 2px solid;
+    border-right: #005a9c 2px solid;
+    /* border-width: 1px;*/
+    /* border-style: ridge;*/
+
+    /*background: url(http://127.0.0.1/images/block-title-bg.png) repeat-x;}*/
+    background: #c4d9ef;
+    line-height: 1;
+    background-image: url(images/lightblue.gif);
+    /* background-image: url(images/lightblue.gif);*/
+    /* background: url(images/arrow_up.gif);no-repeat right */
+}
+
+/* kbd */
+kbd {
+    font-family: courier;
+    /* font-weight: bold; */
+    color: Blue; /* Green */
+    /* background-color: #d4cfcb; */
+    /* border: 1px dashed #666666; */
+    /* padding: 0 0.1em; */
+}
+
+/* code */
+code {
+    font-family: courier;
+    font-weight: bold;
+    color: Blue;
+    /* background-color: #d4cfcb; */
+    /* border: 1px dashed #666666; */
+    /* padding: 0 0.1em; */
+}
+
+filename {
+    font-family: courier;
+    font-weight: bold;
+    font-style italic;
+    color: Blue;
+    /* background-color: #d4cfcb; */
+    /* border: 1px dashed #666666; */
+    /* padding: 0 0.1em; */
+}
+
+/* ==================================pre====================================== */
+pre{
+    text-align: left;
+    font-family:arial;
+    font-size: 11pt;
+    line-height: 120%;
+    background-color: #305050;
+    /* background-color: #333333; */
+    /* background-color: #f0fff0; */
+    /* color: blue ; */
+    color:navy;
+    margin-right: 2em;
+    /* padding: 3px 0px 3px 10px; */
+}
+pre.free {
+    border: 1px dashed #666666;
+    /*padding: 0.5em;*/
+    padding: 3px 0px 3px 10px;
+    margin-left: 1em;
+    margin-right: 2em;
+    white-space: pre;
+    background-color: #f0fff0;
+    color: #000000 ;
+    font-family : Luxi Mono, Luxi Sans, Monospace, sans-serif, 宋体;
+    font-size: 90%;
+    line-height: 100%;
+    /* line-height: 3pt */
+    overflow: auto;
+    /* max-height: 2cm; */
+}
+
+pre.zy {
+    border: 1px dashed #666666;
+    /*padding: 0.5em;*/
+    padding: 3px 0px 3px 10px;
+    margin-left: 1em;
+    margin-right: 2em;
+    white-space: pre;
+    background-color: #f0fff0;
+    color: #000000 ;
+    font-family : Luxi Mono, Luxi Sans, Monospace, sans-serif, 宋体;
+    font-size: 90%;
+    line-height: 100%;
+    /* line-height: 3pt */
+    overflow: auto;
+    max-height: 2cm;
+}
+
+pre.high {
+    max-height: 6cm;
+}
+
+/* .pre a { */
+/* text-decoration: underline; */
+/* } */
+
+pre.syntax {
+    background: lightblue;
+}
+
+pre.error {
+    background-color: pink;
+}
+
+pre.url {
+    background: bisque;
+}
+
+pre.verse {
+    background: pink;
+}
+
+/* END pre */
+
+/* ==================================Footer====================================== */
+#footer {
+    clear: both;
+    height: 0px;
+    width: 100%;
+    margin: 10px 0 0;
+    font-size: 8pt;
+    color: #A9AAAA;
+    /*background: url("http://www.vmware.com/img/background_footer.gif") repeat-x;*/
+}
+
+#footer-corner {
+    background: url("http://www.vmware.com/img/corner_footer_ll.gif") no-repeat bottom left;
+    position: relative;
+    margin: -11px -1px 0;
+    height: 0px;
+    width: 100%;
+}
+
+#footer-corner div {
+    background: url("http://www.vmware.com/img/corner_footer_lr.gif") no-repeat bottom right transparent;
+    height: 11px;
+    position: relative;
+    right: -2px;
+}
+
+#footer div.inner {
+    /* This is required for IE 5.5 */
+    padding: 10px 16px 10px;
+    background: url("http://www.vmware.com/img/corner_footer_lr.gif") no-repeat bottom right;
+}
+
+#footer p {
+    float: left;
+    margin: 0;
+    padding: 0 10px 0 0;
+    font-size: 10px;
+}
+
+#footer ul {
+    float: left;
+    margin: 0;
+    padding: 0 0 0 12px;
+}
+
+#footer ul > li {
+    background: none;
+} /* Remove separator from first item in standards compliant browsers */
+
+#footer li + li {
+    background: url("http://www.vmware.com/img/separator_footer.gif") no-repeat 0 3px;
+} /* Insert separator on all but first element */
+
+#footer li {
+    color: #53606D;
+    background: url("http://www.vmware.com/img/separator_footer.gif") no-repeat 0px 3px;
+    display: block;
+    float: left;
+    margin-left: -9px;
+    padding-left: 9px;
+    padding-right: 16px;
+    font-size: 10pt;
+}
+
+#footer a {
+    color: #A9AAAA;
+}
+
+#footer a:hover {
+    color: #EAB719;
+}
+
+#footer a.rssfeed {
+    float: right;
+}
+
+* {
+    padding:0;
+    margin:0;
+}
+/* END Footer */
+
+.sysHand {
+    cursor:pointer;cursor:hand;
+}
+.sysBr {
+    word-wrap:break-word;
+    table-layout:fixed;
+    overflow:hidden;
+    text-overflow:ellipsis;
+}
+.sysBr180 {
+    word-wrap:xbreak-word;
+    table-layout:fixed;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    width:180px;
+}
+
+.backtotop {
+    max-height: 10pt;
+    text-align: right;
+    text-decoration:none;
+    font-family: arial;
+    font-weight: bold;
+    font-size: 10pt;
+}
+
+/* Source code */
+.srccode {
+    color: #070;
+    background-color: #eee;
+    font-family: courier;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.formBtn {
+    height: 23px;
+    color: #515151;
+    padding: 0 15px;
+    font: bold 11px Arial, sans-serif;
+}

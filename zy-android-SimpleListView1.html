@@ -1,0 +1,102 @@
+<!-- Time-stamp: <zy-android-SimpleListView1.html, 2016-04-23 17:16 Ziyu Zhang > -->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+  <head>
+    <title> Android </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rev="made" href="mailto:emacs_dd@yahoo.com">
+    <link rel="stylesheet" type="text/css" href="./zy.css">
+  </head>
+
+  <body>
+
+    <h1> Simple ListView </h1>
+
+    <h2> 运行效果 </h2>
+
+    <p align="center"> <img src="./SimpleListView1.jpg" /> </p>
+
+    <h2> 界面main.xml </h2>
+
+    <pre>
+      &lt;?<span style="color: #00BBBB;">xml</span> <span style="color: #eeddaa;">version</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">1.0</span><span style="color: #10D010;">"</span> <span style="color: #eeddaa;">encoding</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">utf-8</span><span style="color: #10D010;">"</span>?&gt;
+      &lt;<span style="color: #D0D000;">LinearLayout</span> <span style="color: #b0c4de;">xmlns</span>:<span style="color: #eeddaa;">android</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">http://schemas.android.com/apk/res/android</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">orientation</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">vertical</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_width</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">fill_parent</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_height</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">fill_parent</span><span style="color: #10D010;">"</span>
+      &gt;
+
+      &lt;<span style="color: #D0D000;">ListView</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">id</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">@+id/listview</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_width</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">match_parent</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_height</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">wrap_content</span><span style="color: #10D010;">"</span> &gt;
+      &lt;/<span style="color: #D0D000;">ListView</span>&gt;
+
+      &lt;/<span style="color: #D0D000;">LinearLayout</span>&gt;
+
+    </pre>
+
+    <h2> MainActivity.java </h2>
+
+    <pre>
+      <span style="color: #00BBBB;">package</span> <span style="color: #cd5c5c;">com</span>.<span style="color: #cd5c5c;">example</span>.<span style="color: #cd5c5c;">zy</span>.<span style="color: #cd5c5c;">SimpleListView</span>;
+
+      <span style="color: #00BBBB;">import</span> <span style="color: #cd5c5c;">android</span>.<span style="color: #cd5c5c;">app</span>.<span style="color: #ff7788; font-weight: bold;">Activity</span>;
+      <span style="color: #00BBBB;">import</span> <span style="color: #cd5c5c;">android</span>.<span style="color: #cd5c5c;">os</span>.<span style="color: #ff7788; font-weight: bold;">Bundle</span>;
+
+      <span style="color: #00BBBB;">import</span> <span style="color: #cd5c5c;">android</span>.<span style="color: #cd5c5c;">widget</span>.<span style="color: #ff7788; font-weight: bold;">ArrayAdapter</span>;
+      <span style="color: #00BBBB;">import</span> <span style="color: #cd5c5c;">android</span>.<span style="color: #cd5c5c;">widget</span>.<span style="color: #ff7788; font-weight: bold;">ListView</span>;
+      <span style="color: #00BBBB;">import</span> <span style="color: #cd5c5c;">android</span>.<span style="color: #cd5c5c;">widget</span>.<span style="color: #cd5c5c;">AdapterView</span>.<span style="color: #ff7788; font-weight: bold;">OnItemClickListener</span>;
+      <span style="color: #00BBBB;">import</span> <span style="color: #cd5c5c;">android</span>.<span style="color: #cd5c5c;">widget</span>.<span style="color: #ff7788; font-weight: bold;">ListView</span>;
+      <span style="color: #00BBBB;">import</span> <span style="color: #cd5c5c;">android</span>.<span style="color: #cd5c5c;">widget</span>.<span style="color: #ff7788; font-weight: bold;">Toast</span>;
+      <span style="color: #00BBBB;">import</span> <span style="color: #cd5c5c;">android</span>.<span style="color: #cd5c5c;">view</span>.<span style="color: #ff7788; font-weight: bold;">View</span>;
+      <span style="color: #00BBBB;">import</span> <span style="color: #cd5c5c;">android</span>.<span style="color: #cd5c5c;">widget</span>.<span style="color: #ff7788; font-weight: bold;">AdapterView</span>;
+      <span style="color: #00BBBB;">import</span> <span style="color: #cd5c5c;">android</span>.<span style="color: #cd5c5c;">widget</span>.<span style="color: #cd5c5c;">AdapterView</span>.<span style="color: #ff7788; font-weight: bold;">OnItemClickListener</span>;
+
+      <span style="color: #00BBBB;">public</span> <span style="color: #00BBBB;">class</span> <span style="color: #ff7788; font-weight: bold;">MainActivity</span> <span style="color: #00BBBB;">extends</span> <span style="color: #ff7788; font-weight: bold;">Activity</span>
+      {
+
+      <span style="color: #00BBBB;">private</span> <span style="color: #ff7788; font-weight: bold;">ListView</span> <span style="color: #eeddaa;">listview</span>;
+
+      <span style="color: #00BBBB;">private</span> <span style="color: #ff7788; font-weight: bold;">ArrayAdapter</span> <span style="color: #eeddaa;">arrayAdapter</span>;
+
+      <span style="color: #00BBBB;">private</span> <span style="color: #ff7788; font-weight: bold;">String</span>[] <span style="color: #eeddaa;">items</span> = {<span style="color: #10D010;">"&#20161;"</span>, <span style="color: #10D010;">"&#20041;"</span>, <span style="color: #10D010;">"&#31036;"</span>, <span style="color: #10D010;">"&#26234;"</span>, <span style="color: #10D010;">"&#20449;"</span>, <span style="color: #10D010;">"&#24544;"</span>, <span style="color: #10D010;">"&#23389;"</span>, <span style="color: #10D010;">"&#24265;"</span>, <span style="color: #10D010;">"&#32827;"</span>, <span style="color: #10D010;">"&#33410;"</span>};
+
+      <span style="color: #cd5c5c;">@Override</span>
+      <span style="color: #00BBBB;">public</span> <span style="color: #ff7788; font-weight: bold;">void</span> <span style="color: #D0D000;">onCreate</span>(<span style="color: #ff7788; font-weight: bold;">Bundle</span> <span style="color: #eeddaa;">savedInstanceState</span>)
+      {
+      <span style="color: #00BBBB;">super</span>.onCreate(savedInstanceState);
+      setContentView(R.layout.main);
+
+      <span style="color: #a8a8a8; font-weight: bold; font-style: italic;">// </span><span style="color: #a8a8a8; font-weight: bold; font-style: italic;">tvSelection=(TextView)findViewById(R.id.tvSelection);
+      </span> listview = (<span style="color: #ff7788; font-weight: bold;">ListView</span>)findViewById(R.id.listview);
+      arrayAdapter = <span style="color: #00BBBB;">new</span> <span style="color: #ff7788; font-weight: bold;">ArrayAdapter</span>(<span style="color: #00BBBB;">this</span>, <span style="color: #cd5c5c;">android</span>.R.layout.simple_list_item_1, items);
+      listview.setAdapter(arrayAdapter);
+
+      listView.setOnItemClickListener(<span style="color: #00BBBB;">new</span> <span style="color: #ff7788; font-weight: bold;">OnItemClickListener</span>() {
+      <span style="color: #00BBBB;">public</span> <span style="color: #ff7788; font-weight: bold;">void</span> <span style="color: #D0D000;">onItemClick</span>(<span style="color: #ff7788; font-weight: bold;">AdapterView</span>&lt;?&gt; <span style="color: #eeddaa;">parent</span>, <span style="color: #ff7788; font-weight: bold;">View</span> <span style="color: #eeddaa;">view</span>,
+      <span style="color: #ff7788; font-weight: bold;">int</span> <span style="color: #eeddaa;">position</span>, <span style="color: #ff7788; font-weight: bold;">long</span> <span style="color: #eeddaa;">id</span>) {
+      <span style="color: #a8a8a8; font-weight: bold; font-style: italic;">// </span><span style="color: #a8a8a8; font-weight: bold; font-style: italic;">When clicked, show a toast with the TextView text
+      </span> Toast.makeText(getApplicationContext(),
+      ((<span style="color: #ff7788; font-weight: bold;">TextView</span>) view).getText(), <span style="color: #cd5c5c;">Toast</span>.LENGTH_SHORT).show();
+      }});
+
+      <span style="color: #a8a8a8; font-weight: bold; font-style: italic;">// </span><span style="color: #a8a8a8; font-weight: bold; font-style: italic;">listview.setOnItemClickListener(new OnItemClickListener() {
+      </span>
+      <span style="color: #a8a8a8; font-weight: bold; font-style: italic;">// </span><span style="color: #a8a8a8; font-weight: bold; font-style: italic;">@Override
+      </span> <span style="color: #a8a8a8; font-weight: bold; font-style: italic;">// </span><span style="color: #a8a8a8; font-weight: bold; font-style: italic;">public void onItemClick(AdapterView&lt;?&gt; a, View v, int position, long id) {
+      </span> <span style="color: #a8a8a8; font-weight: bold; font-style: italic;">// </span><span style="color: #a8a8a8; font-weight: bold; font-style: italic;">Object o = listview.getItemAtPosition(position);
+      </span> <span style="color: #a8a8a8; font-weight: bold; font-style: italic;">// </span><span style="color: #a8a8a8; font-weight: bold; font-style: italic;">arrayAdapter newsData = (arrayAdapter) o;
+      </span> <span style="color: #a8a8a8; font-weight: bold; font-style: italic;">// </span><span style="color: #a8a8a8; font-weight: bold; font-style: italic;">Toast.makeText(MainActivity.this, "" + newsData, Toast.LENGTH_SHORT).show();
+      </span> <span style="color: #a8a8a8; font-weight: bold; font-style: italic;">//// </span><span style="color: #a8a8a8; font-weight: bold; font-style: italic;">Toast.makeText(MainActivity.this, "" + newsData, Toast.LENGTH_LONG).show();
+      </span> <span style="color: #a8a8a8; font-weight: bold; font-style: italic;">// </span><span style="color: #a8a8a8; font-weight: bold; font-style: italic;">}
+      </span>
+      <span style="color: #a8a8a8; font-weight: bold; font-style: italic;">// </span><span style="color: #a8a8a8; font-weight: bold; font-style: italic;">});
+      </span>
+      }
+      }
+    </pre>
+  </body>
+</html>

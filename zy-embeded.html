@@ -1,0 +1,285 @@
+<!-- Time-stamp: <zy-embeded.html, 2016-04-23 16:42 Ziyu Zhang > -->
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+  <head>
+    <title> Android </title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rev="made" href="mailto:emacs_dd@yahoo.com">
+    <link rel="stylesheet" type="text/css" href="./zy.css">
+  </head>
+
+  <body>
+
+    <h1> Android </h1>
+
+    <h2> 考试系统 </h2>
+
+<pre>
+&lt;?<span style="color: #00BBBB;">xml</span> <span style="color: #eeddaa;">version</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">1.0</span><span style="color: #10D010;">"</span> <span style="color: #eeddaa;">encoding</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">utf-8</span><span style="color: #10D010;">"</span>?&gt;
+&lt;<span style="color: #D0D000;">RelativeLayout</span>
+    <span style="color: #b0c4de;">xmlns</span>:<span style="color: #eeddaa;">android</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">http://schemas.android.com/apk/res/android</span><span style="color: #10D010;">"</span>
+    <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_width</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">fill_parent</span><span style="color: #10D010;">"</span>
+    <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_height</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">fill_parent</span><span style="color: #10D010;">"</span>&gt;
+
+  <span style="color: #a8a8a8; font-weight: bold; font-style: italic;">&lt;!--</span><span style="color: #a8a8a8; font-weight: bold; font-style: italic;"> android:layout_centerHorizontal="true" </span><span style="color: #a8a8a8; font-weight: bold; font-style: italic;">--&gt;</span>
+  &lt;<span style="color: #D0D000;">TextView</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">id</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">@+id/tvExam</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_centerHorizontal</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">true</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_width</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">wrap_content</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_height</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">wrap_content</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">text</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">Android &#32771;&#35797;</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">textSize</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">30sp</span><span style="color: #10D010;">"</span>
+      /&gt;
+
+  <span style="color: #a8a8a8; font-weight: bold; font-style: italic;">&lt;!--</span><span style="color: #a8a8a8; font-weight: bold; font-style: italic;"> &#36873;&#25321;&#39064; multiple-choice </span><span style="color: #a8a8a8; font-weight: bold; font-style: italic;">--&gt;</span>
+  <span style="color: #a8a8a8; font-weight: bold; font-style: italic;">&lt;!--</span><span style="color: #a8a8a8; font-weight: bold; font-style: italic;"> &#21333;&#36873;&#39064; single answer </span><span style="color: #a8a8a8; font-weight: bold; font-style: italic;">--&gt;</span>
+  <span style="color: #a8a8a8; font-weight: bold; font-style: italic;">&lt;!--</span><span style="color: #a8a8a8; font-weight: bold; font-style: italic;"> &#22810;&#36873;&#39064; multiple answer </span><span style="color: #a8a8a8; font-weight: bold; font-style: italic;">--&gt;</span>
+  <span style="color: #a8a8a8; font-weight: bold; font-style: italic;">&lt;!--</span><span style="color: #a8a8a8; font-weight: bold; font-style: italic;"> &#21028;&#26029;&#39064; true-false question </span><span style="color: #a8a8a8; font-weight: bold; font-style: italic;">--&gt;</span>
+  <span style="color: #a8a8a8; font-weight: bold; font-style: italic;">&lt;!--</span><span style="color: #a8a8a8; font-weight: bold; font-style: italic;"> ==================================&#31532;&#19968;&#22823;&#39064; &#22635;&#31354;&#39064;====================================== </span><span style="color: #a8a8a8; font-weight: bold; font-style: italic;">--&gt;</span>
+  &lt;<span style="color: #D0D000;">TextView</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">id</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">@+id/tvFillBlankProblem</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_below</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">@id/tvExam</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_width</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">fill_parent</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_height</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">wrap_content</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">text</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">&#19968;.&#22635;&#31354;&#39064;</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">textSize</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">22sp</span><span style="color: #10D010;">"</span>
+      /&gt;
+
+  <span style="color: #a8a8a8; font-weight: bold; font-style: italic;">&lt;!--</span><span style="color: #a8a8a8; font-weight: bold; font-style: italic;"> ==================================&#22635;&#31354;&#39064; &#31532;1&#23567;&#39064;====================================== </span><span style="color: #a8a8a8; font-weight: bold; font-style: italic;">--&gt;</span>
+  &lt;<span style="color: #D0D000;">TextView</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">id</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">@+id/tvFillBlankQuestion1</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_below</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">@id/tvFillBlankProblem</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_width</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">wrap_content</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_height</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">wrap_content</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">text</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">1.Android&#30340;&#26680;&#24515;&#22522;&#20110;</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">textSize</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">16sp</span><span style="color: #10D010;">"</span>
+      /&gt;
+
+  &lt;<span style="color: #D0D000;">EditText</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">id</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">@+id/edBlank1</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_toRightOf</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">@id/tvFillBlankQuestion1</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_alignBaseline</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">@id/tvFillBlankQuestion1</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_height</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">wrap_content</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_width</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">100dp</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">hint</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">&#31354;1</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">textSize</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">16sp</span><span style="color: #10D010;">"</span>
+      /&gt;
+
+  <span style="color: #a8a8a8; font-weight: bold; font-style: italic;">&lt;!--</span><span style="color: #a8a8a8; font-weight: bold; font-style: italic;"> ==================================&#22635;&#31354;&#39064; &#31532;2&#23567;&#39064;====================================== </span><span style="color: #a8a8a8; font-weight: bold; font-style: italic;">--&gt;</span>
+
+  &lt;<span style="color: #D0D000;">TextView</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">id</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">@+id/tvFillBlankQuestion2</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_below</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">@id/tvFillBlankQuestion1</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_width</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">wrap_content</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_height</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">wrap_content</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">text</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">2.Android&#22235;&#22823;&#22522;&#26412;&#32452;&#20214;&#20998;&#21035;&#26159;</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">textSize</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">16sp</span><span style="color: #10D010;">"</span>
+      /&gt;
+
+  &lt;<span style="color: #D0D000;">EditText</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">id</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">@+id/edBlank2</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_toRightOf</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">@id/tvFillBlankQuestion2</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_alignBaseline</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">@id/tvFillBlankQuestion2</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_height</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">wrap_content</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_width</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">100dp</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">hint</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">&#31354;2</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">textSize</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">16sp</span><span style="color: #10D010;">"</span>
+      /&gt;
+
+  &lt;<span style="color: #D0D000;">TextView</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">id</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">@+id/tvDunhao</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_toRightOf</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">@id/edBlank2</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_alignBaseline</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">@id/tvFillBlankQuestion2</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_width</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">wrap_content</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_height</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">wrap_content</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">text</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">.</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">textSize</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">16sp</span><span style="color: #10D010;">"</span>
+      /&gt;
+
+  <span style="color: #a8a8a8; font-weight: bold; font-style: italic;">&lt;!--</span><span style="color: #a8a8a8; font-weight: bold; font-style: italic;"> Activity&#12289;Service&#12289;Broadcast Receiver&#12289;Content Provider&#12290; </span><span style="color: #a8a8a8; font-weight: bold; font-style: italic;">--&gt;</span>
+  <span style="color: #a8a8a8; font-weight: bold; font-style: italic;">&lt;!--</span><span style="color: #a8a8a8; font-weight: bold; font-style: italic;"> &#21333;&#36873;&#39064; single answer </span><span style="color: #a8a8a8; font-weight: bold; font-style: italic;">--&gt;</span>
+  <span style="color: #a8a8a8; font-weight: bold; font-style: italic;">&lt;!--</span><span style="color: #a8a8a8; font-weight: bold; font-style: italic;"> ==================================&#31532;&#20108;&#22823;&#39064; &#21333;&#36873;&#39064; single answer ====================================== </span><span style="color: #a8a8a8; font-weight: bold; font-style: italic;">--&gt;</span>
+  &lt;<span style="color: #D0D000;">TextView</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">id</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">@+id/tvSingleAnswerProblem</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_below</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">@id/tvFillBlankQuestion2</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_marginTop</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">16dp</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_width</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">fill_parent</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_height</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">wrap_content</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">text</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">&#20108;.&#21333;&#36873;&#39064;</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">textSize</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">22sp</span><span style="color: #10D010;">"</span>
+      /&gt;
+
+  <span style="color: #a8a8a8; font-weight: bold; font-style: italic;">&lt;!--</span><span style="color: #a8a8a8; font-weight: bold; font-style: italic;"> ==================================&#21333;&#36873;&#39064; &#31532;1&#23567;&#39064;====================================== </span><span style="color: #a8a8a8; font-weight: bold; font-style: italic;">--&gt;</span>
+  &lt;<span style="color: #D0D000;">TextView</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">id</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">@+id/tvSingleAnswerQuestion1</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_below</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">@id/tvSingleAnswerProblem</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_width</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">fill_parent</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_height</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">wrap_content</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">text</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">1.&#20320;&#21916;&#27426;Android&#21527;</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">textSize</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">16sp</span><span style="color: #10D010;">"</span>
+      /&gt;
+
+  &lt;<span style="color: #D0D000;">RadioGroup</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">id</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">@+id/rgSingleAnswerQuestion1</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_below</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">@id/tvSingleAnswerQuestion1</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">orientation</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">horizontal</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_width</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">wrap_content</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_height</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">wrap_content</span><span style="color: #10D010;">"</span> &gt;
+
+    &lt;<span style="color: #D0D000;">RadioButton</span>
+        <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">id</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">@+id/rbYes</span><span style="color: #10D010;">"</span>
+        <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_width</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">wrap_content</span><span style="color: #10D010;">"</span>
+        <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_height</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">wrap_content</span><span style="color: #10D010;">"</span>
+        <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">paddingRight</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">30dip</span><span style="color: #10D010;">"</span>
+        <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">text</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">&#26159;</span><span style="color: #10D010;">"</span>
+        /&gt;
+    <span style="color: #a8a8a8; font-weight: bold; font-style: italic;">&lt;!--</span><span style="color: #a8a8a8; font-weight: bold; font-style: italic;"> android:checked="true" </span><span style="color: #a8a8a8; font-weight: bold; font-style: italic;">--&gt;</span>
+
+    &lt;<span style="color: #D0D000;">RadioButton</span>
+        <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">id</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">@+id/rbNo</span><span style="color: #10D010;">"</span>
+        <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_width</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">wrap_content</span><span style="color: #10D010;">"</span>
+        <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_height</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">wrap_content</span><span style="color: #10D010;">"</span>
+        <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">paddingRight</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">30dip</span><span style="color: #10D010;">"</span>
+        <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">text</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">&#21542;</span><span style="color: #10D010;">"</span>
+        /&gt;
+
+  &lt;/<span style="color: #D0D000;">RadioGroup</span>&gt;
+
+  <span style="color: #a8a8a8; font-weight: bold; font-style: italic;">&lt;!--</span><span style="color: #a8a8a8; font-weight: bold; font-style: italic;"> ==================================&#21333;&#36873;&#39064; &#31532;2&#23567;&#39064;====================================== </span><span style="color: #a8a8a8; font-weight: bold; font-style: italic;">--&gt;</span>
+
+  &lt;<span style="color: #D0D000;">TextView</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">id</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">@+id/tvSingleAnswerQuestion2</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_below</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">@id/rgSingleAnswerQuestion1</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_width</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">fill_parent</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_height</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">wrap_content</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">text</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">2.Android&#37319;&#29992;_________&#32534;&#31243;&#35821;&#35328;&#12290;</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">textSize</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">16sp</span><span style="color: #10D010;">"</span>
+      /&gt;
+
+  &lt;<span style="color: #D0D000;">RadioGroup</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">id</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">@+id/rgSingleAnswerQuestion2</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_below</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">@id/tvSingleAnswerQuestion2</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">orientation</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">horizontal</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_width</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">wrap_content</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_height</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">wrap_content</span><span style="color: #10D010;">"</span> &gt;
+
+    &lt;<span style="color: #D0D000;">RadioButton</span>
+        <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">id</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">@+id/rbC</span><span style="color: #10D010;">"</span>
+        <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_width</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">wrap_content</span><span style="color: #10D010;">"</span>
+        <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_height</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">wrap_content</span><span style="color: #10D010;">"</span>
+        <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">paddingRight</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">30dip</span><span style="color: #10D010;">"</span>
+        <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">text</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">C</span><span style="color: #10D010;">"</span>
+        /&gt;
+    <span style="color: #a8a8a8; font-weight: bold; font-style: italic;">&lt;!--</span><span style="color: #a8a8a8; font-weight: bold; font-style: italic;"> android:checked="true" </span><span style="color: #a8a8a8; font-weight: bold; font-style: italic;">--&gt;</span>
+
+    &lt;<span style="color: #D0D000;">RadioButton</span>
+        <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">id</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">@+id/rbJava</span><span style="color: #10D010;">"</span>
+        <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_width</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">wrap_content</span><span style="color: #10D010;">"</span>
+        <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_height</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">wrap_content</span><span style="color: #10D010;">"</span>
+        <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">paddingRight</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">30dip</span><span style="color: #10D010;">"</span>
+        <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">text</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">Java</span><span style="color: #10D010;">"</span>
+        /&gt;
+
+    &lt;<span style="color: #D0D000;">RadioButton</span>
+        <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">id</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">@+id/rbHTML</span><span style="color: #10D010;">"</span>
+        <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_width</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">wrap_content</span><span style="color: #10D010;">"</span>
+        <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_height</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">wrap_content</span><span style="color: #10D010;">"</span>
+        <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">text</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">HTML</span><span style="color: #10D010;">"</span>
+        /&gt;
+  &lt;/<span style="color: #D0D000;">RadioGroup</span>&gt;
+
+  <span style="color: #a8a8a8; font-weight: bold; font-style: italic;">&lt;!--</span><span style="color: #a8a8a8; font-weight: bold; font-style: italic;"> ==================================&#31532;&#19977;&#22823;&#39064; &#22810;&#36873;&#39064; multiple answer ====================================== </span><span style="color: #a8a8a8; font-weight: bold; font-style: italic;">--&gt;</span>
+
+  &lt;<span style="color: #D0D000;">TextView</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">id</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">@+id/tvMultipleAnswerProblem</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_below</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">@id/rgSingleAnswerQuestion2</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_marginTop</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">16dp</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_width</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">fill_parent</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_height</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">wrap_content</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">text</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">&#19977;.&#22810;&#36873;&#39064;</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">textSize</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">22sp</span><span style="color: #10D010;">"</span>
+      /&gt;
+  <span style="color: #a8a8a8; font-weight: bold; font-style: italic;">&lt;!--</span><span style="color: #a8a8a8; font-weight: bold; font-style: italic;"> ==================================&#22810;&#36873;&#39064; &#31532;1&#23567;&#39064;====================================== </span><span style="color: #a8a8a8; font-weight: bold; font-style: italic;">--&gt;</span>
+
+  &lt;<span style="color: #D0D000;">TextView</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">id</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">@+id/tvMultipleAnswerQuestion1</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_below</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">@id/tvMultipleAnswerProblem</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_width</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">fill_parent</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_height</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">wrap_content</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">text</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">1.Android&#29992;__________________&#32534;&#31243;&#35821;&#35328;&#12290;</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">textSize</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">16sp</span><span style="color: #10D010;">"</span>
+      /&gt;
+
+  <span style="color: #a8a8a8; font-weight: bold; font-style: italic;">&lt;!--</span><span style="color: #a8a8a8; font-weight: bold; font-style: italic;"> &lt;LinearLayout </span><span style="color: #a8a8a8; font-weight: bold; font-style: italic;">--&gt;</span>
+  <span style="color: #a8a8a8; font-weight: bold; font-style: italic;">&lt;!--</span><span style="color: #a8a8a8; font-weight: bold; font-style: italic;"> android:id="@+id/loQuestion3" </span><span style="color: #a8a8a8; font-weight: bold; font-style: italic;">--&gt;</span>
+  <span style="color: #a8a8a8; font-weight: bold; font-style: italic;">&lt;!--</span><span style="color: #a8a8a8; font-weight: bold; font-style: italic;"> android:layout_below="@id/tvQuestion3" </span><span style="color: #a8a8a8; font-weight: bold; font-style: italic;">--&gt;</span>
+  <span style="color: #a8a8a8; font-weight: bold; font-style: italic;">&lt;!--</span><span style="color: #a8a8a8; font-weight: bold; font-style: italic;"> android:layout_width="fill_parent" </span><span style="color: #a8a8a8; font-weight: bold; font-style: italic;">--&gt;</span>
+  <span style="color: #a8a8a8; font-weight: bold; font-style: italic;">&lt;!--</span><span style="color: #a8a8a8; font-weight: bold; font-style: italic;"> android:layout_height="fill_parent" </span><span style="color: #a8a8a8; font-weight: bold; font-style: italic;">--&gt;</span>
+  <span style="color: #a8a8a8; font-weight: bold; font-style: italic;">&lt;!--</span><span style="color: #a8a8a8; font-weight: bold; font-style: italic;"> android:orientation="vertical" &gt; </span><span style="color: #a8a8a8; font-weight: bold; font-style: italic;">--&gt;</span>
+
+  &lt;<span style="color: #D0D000;">CheckBox</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">id</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">@+id/cbJava</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_below</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">@id/tvMultipleAnswerQuestion1</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_width</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">wrap_content</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_height</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">wrap_content</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">paddingRight</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">30dip</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">text</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">Java</span><span style="color: #10D010;">"</span> /&gt;
+
+  &lt;<span style="color: #D0D000;">CheckBox</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">id</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">@+id/cbXML</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_toRightOf</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">@id/cbJava</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_alignBottom</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">@id/cbJava</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_width</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">wrap_content</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_height</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">wrap_content</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">paddingRight</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">30dip</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">text</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">XML</span><span style="color: #10D010;">"</span>
+      /&gt;
+  <span style="color: #a8a8a8; font-weight: bold; font-style: italic;">&lt;!--</span><span style="color: #a8a8a8; font-weight: bold; font-style: italic;"> android:checked="true" </span><span style="color: #a8a8a8; font-weight: bold; font-style: italic;">--&gt;</span>
+
+  &lt;<span style="color: #D0D000;">CheckBox</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">id</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">@+id/cbC</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_toRightOf</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">@id/cbXML</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_alignBottom</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">@id/cbJava</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_width</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">wrap_content</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_height</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">wrap_content</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">text</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">C</span><span style="color: #10D010;">"</span> /&gt;
+
+  <span style="color: #a8a8a8; font-weight: bold; font-style: italic;">&lt;!--</span><span style="color: #a8a8a8; font-weight: bold; font-style: italic;"> &lt;/LinearLayout&gt; </span><span style="color: #a8a8a8; font-weight: bold; font-style: italic;">--&gt;</span>
+
+  &lt;<span style="color: #D0D000;">LinearLayout</span>
+      <span style="color: #b0c4de;">xmlns</span>:<span style="color: #eeddaa;">android</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">http://schemas.android.com/apk/res/android</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_width</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">fill_parent</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_height</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">wrap_content</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">orientation</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">horizontal</span><span style="color: #10D010;">"</span>
+      <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_below</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">@id/cbJava</span><span style="color: #10D010;">"</span>
+      &gt;
+
+    <span style="color: #a8a8a8; font-weight: bold; font-style: italic;">&lt;!--</span><span style="color: #a8a8a8; font-weight: bold; font-style: italic;"> android:layout_alignParentEnd="true" </span><span style="color: #a8a8a8; font-weight: bold; font-style: italic;">--&gt;</span>
+    <span style="color: #a8a8a8; font-weight: bold; font-style: italic;">&lt;!--</span><span style="color: #a8a8a8; font-weight: bold; font-style: italic;"> android:layout_alignParentRight="true" </span><span style="color: #a8a8a8; font-weight: bold; font-style: italic;">--&gt;</span>
+
+    &lt;<span style="color: #D0D000;">Button</span>
+        <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">id</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">@+id/btClear</span><span style="color: #10D010;">"</span>
+        <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_width</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">match_parent</span><span style="color: #10D010;">"</span>
+        <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_height</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">wrap_content</span><span style="color: #10D010;">"</span>
+        <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_weight</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">1</span><span style="color: #10D010;">"</span>
+        <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">textSize</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">19sp</span><span style="color: #10D010;">"</span>
+        <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">text</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">&#28165;&#38500;</span><span style="color: #10D010;">"</span> /&gt;
+    <span style="color: #a8a8a8; font-weight: bold; font-style: italic;">&lt;!--</span><span style="color: #a8a8a8; font-weight: bold; font-style: italic;"> android:onClick="onClear" </span><span style="color: #a8a8a8; font-weight: bold; font-style: italic;">--&gt;</span>
+
+    &lt;<span style="color: #D0D000;">Button</span>
+        <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">id</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">@+id/btSubmit</span><span style="color: #10D010;">"</span>
+        <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_width</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">match_parent</span><span style="color: #10D010;">"</span>
+        <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_height</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">wrap_content</span><span style="color: #10D010;">"</span>
+        <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">layout_weight</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">1</span><span style="color: #10D010;">"</span>
+        <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">textSize</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">20sp</span><span style="color: #10D010;">"</span>
+        <span style="color: #b0c4de;">android</span>:<span style="color: #eeddaa;">text</span>=<span style="color: #10D010;">"</span><span style="color: #10D010;">&#25552;&#20132;</span><span style="color: #10D010;">"</span> /&gt;
+  &lt;/<span style="color: #D0D000;">LinearLayout</span>&gt;
+
+&lt;/<span style="color: #D0D000;">RelativeLayout</span>&gt;
+</pre>
+    
+
+  </body>
+</html>
